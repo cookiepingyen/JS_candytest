@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="app.js" defer></script>
+  </head>
+  <style>
+    input {
+      width: 45px;
+    }
+    span {
+      display: inline-block;
+      text-align: center;
+    }
+    .Fvalue {
+      width: 50px;
+    }
+    .Cvalue {
+      width: 50px;
+    }
+    .unit {
+      display: inline-block;
+      width: 30px;
+    }
+  </style>
+  <body>
+    <div>
+      <input class="Celsius" type="text" placeholder="攝氏" />
+      <span class="unit">˚C</span>
+      <button class="CtoF">=></button>
+      <span>華氏:</span>
+      <span class="Fvalue">0</span><span class="unit">˚F</span>
+    </div>
+
+    <div>
+      <input class="Fahrenheit" type="text" placeholder="華氏" />
+      <span class="unit">˚F</span>
+      <button class="FtoC">=></button>
+      <span>攝氏:</span>
+      <span class="Cvalue">0</span>
+      <span class="unit">˚C</span>
+    </div>
+  </body>
+</html>
