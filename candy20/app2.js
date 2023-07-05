@@ -3,14 +3,11 @@
 // 題目：檢查字串的 x 跟 o 的數量是不是一樣多，不分大小寫
 
 function xxoo(str) {
-  // 實作寫在這裡
-  const numX = str
-    .split("")
-    .filter((letter) => letter == "x" || letter == "X").length;
-  const numY = str
-    .split("")
-    .filter((letter) => letter == "o" || letter == "O").length;
-  return numX == numY;
+  // 正則表達, g表示進行全域批配
+  //i表示不區分大小寫
+  numX = str.match(/x/gi) || [];
+  numO = str.match(/o/gi) || [];
+  return numX.length == numO.length;
 }
 
 console.log(xxoo("ooxx")); // true
