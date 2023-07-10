@@ -17,6 +17,10 @@ class Queue {
   get length() {
     return this.items.length;
   }
+
+  peek() {
+    return this.items[0];
+  }
 }
 
 const queue = new Queue();
