@@ -11,5 +11,5 @@ end
 
 
 p (sumOfSmallestValues(list1)) #印出 7
-p (sumOfSmallestValues(list2)) #
+p (sumOfSmallestValues(list2)) #印出 19
 
