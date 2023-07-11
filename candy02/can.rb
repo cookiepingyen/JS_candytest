@@ -5,7 +5,7 @@
  chars1 = ["a", "b", "c", "d", "f", "g"];
  chars2 = ["O", "Q", "R", "S"];
 
- #印出連續字元減去原本的陣列
+ #印出連續字元減去在減去原本的陣列會得到缺少的字元
 def missingChar(chars)
   list = (chars[0]..chars[-1]).to_a - chars
 end

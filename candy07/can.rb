@@ -1,5 +1,5 @@
 # 編號：CANDY-007
-# 程式語言：JavaScript
+# 程式語言：Ruby
 # 題目：在某個數字陣列裡，可能藏有某個不合群的奇數或偶數，試著找出它！
 
 #
@@ -8,7 +8,6 @@ def findSomeDifferent(numbers)
   even = numbers.select{|n|n.even?}
   odd = numbers.select{|n|n.odd?}
   return (even.length > odd.length)? odd[0] : even[0]; 
-
 
 end
 
