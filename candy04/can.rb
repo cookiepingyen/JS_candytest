@@ -4,6 +4,12 @@
 
 def humanReadableTimer(seconds) 
 
+hr = (seconds/3600).to_s.rjust(2,"0")
+min = ((seconds % 3600) / 60).to_s.rjust(2,"0")
+sec =  (seconds % 60).to_s.rjust(2,"0")
+
+"#{hr}:#{min}:#{sec}"
+
 end
 
 p humanReadableTimer(0) #印出 00:00:00

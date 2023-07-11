@@ -6,6 +6,7 @@ list = [false, 1, 0, -1, 2, 0, 1, 3, "a"];
 
 def moveZerosToEnd(arr) 
   #程式碼寫在這裡
+  arr.select{|x| x!=0 } + arr.select{|x| x==0 }
 end
 
 p moveZerosToEnd(list);  #印出 [false, 1, -1, 2, 1, 3, "a", 0, 0]

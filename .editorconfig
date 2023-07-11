@@ -1,0 +1,4 @@
+# Ruby 檔案
+[*.rb]
+indent_style = space
+indent_size = 2
