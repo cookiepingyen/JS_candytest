@@ -1,11 +1,11 @@
 # 編號：CANDY-019
-# 程式語言：JavaScript
+# 程式語言：Ruby
 # 題目：檢查是否為某個數字的平方數
 
 def isSquare(num) 
   # 實作寫在這裡
   return num ** 0.5 % 1 == 0 if num > 0
-  false
+  false #虛數不支援%因此要補上false
 end
 
 p isSquare(0)  # true
