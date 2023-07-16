@@ -11,7 +11,7 @@ def numberReducer(num)
     sum += num % 10
     num = num / 10
   end
-  return sum >= 10 ? numberReducer(sum) : sum;
+  sum >= 10 ? numberReducer(sum) : sum;
 end
 
 p numberReducer(9527) # 印出 5

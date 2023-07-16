@@ -5,7 +5,7 @@
 
 def countBits(num) 
   #將數字轉成二進位的字串,在分割成陣列後, 回傳陣列=="1"的長度
-  return num.to_s(2).split("").filter {|n| n.to_i.odd? }.length
+  return num.to_s(2).split("").filter{|n| n.to_i.odd? }.length
 end
 
 p countBits(1234) # 5

@@ -4,19 +4,13 @@
 #      英文字母 a 得 1 分、b 得 2 分、c 得 3 分，以此類推。
 #      所有傳入的字都是小寫。
 
+
 def highestScoreWord(input) 
-  wordlist = input.split(" ");
-  numberlist = wordlist.map  {|word|  
-    sum = 0
-    word.chars.each do |letter|
-      sum += letter.ord - 96
-    end
-    sum #這邊不可以return 會提前回傳整個function的回傳值
+  numberlist = input.split(" ").map { |word|  
+    word.chars.reduce(0) {|sum, x| sum + (x.ord-96)} 
   }
-  return wordlist[numberlist.index(numberlist.max)]
-
+  input.split(" ")[numberlist.index(numberlist.max)] #numberlist 最大值的索引位置傳給 wordlist印出
 end
-
 
 
 p highestScoreWord("lorem ipsum dolor sit amet"); # 印出 ipsum

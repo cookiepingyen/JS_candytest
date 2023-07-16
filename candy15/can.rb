@@ -9,13 +9,19 @@
 # #{1,2} 表示匹配前面的元素至少1 次，最多 2 次。
 # #g 表示進行全域批配
 
-def splitString(str) 
-  # 用scan方法與正則表達把引數分成1~2個字元為一組的陣列,沒有會回傳[]
-  # 如果輸入字串長度為奇數, 陣列最後一個值加上"_"
-  result = str.scan(/.{1,2}/);
-  result[-1] = result[-1].ljust(2, '_') if str.length.odd?
-  result;
+# def splitString(str) 
+#   # 用scan方法與正則表達把引數分成1~2個字元為一組的陣列,沒有會回傳[]
+#   # 如果輸入字串長度為奇數, 陣列最後一個值加上"_"
+#   result = str.scan(/.{1,2}/);
+#   result[-1] = result[-1].ljust(2, '_') if str.length.odd?
+#   result;
+# end
+
+
+def splitString(str)
+  str.chars.each_slice(2).map { |a, b| "#{a}#{b || '_'}" }
 end
+
 
 p splitString("abcdef") #["ab", "cd", "ef"]
 p splitString("abcdefg") #["ab", "cd", "ef", "g_"]

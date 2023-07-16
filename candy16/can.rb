@@ -5,13 +5,13 @@
 
 def toCamelCase(str) 
   # 實作寫在這裡
-  return str.split("_")
-            .map.with_index do |word , index| 
-              word.capitalize if index > 0
-              word
-            end 
-            .join("");
-  end
+  str.split("_")
+     .map.with_index do |word , index| 
+        word.capitalize if index > 0
+        word
+      end 
+     .join("");
+end
 
 p toCamelCase("book") # book
 p toCamelCase("book_store") # bookStore

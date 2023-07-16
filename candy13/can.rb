@@ -13,9 +13,10 @@ def isValidVatNumber(vat)
     vat.split("").each_with_index do |num, i| 
       sum += (num.to_i * ratio[i]) % 10 + (num.to_i * ratio[i]) / 10
     end
-    return sum % 10 == 0 || (vat[6] == 7 && (sum + 1) % 10 == 0);
+    sum % 5 == 0 || (vat[6] == 7 && (sum + 1) % 5 == 0);
   end
 end
+
 
 p isValidVatNumber("10458575") # true
 p isValidVatNumber("88117125") # true

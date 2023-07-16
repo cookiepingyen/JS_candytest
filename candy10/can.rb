@@ -6,7 +6,7 @@
 #將陣列的數字先去除0,再用map轉成讓特定格式, 並加上條件最後一位只回傳數值
 def expandedForm(num) 
   numlist = num.to_s.split("")
-  return numlist.select{ |n| n != "0" }.map.with_index do |n, i|
+  numlist.select{ |n| n != "0" }.map.with_index do |n, i|
     (i == numlist.length - 1) ? n : "#{10 ** (numlist.length - 1 - i)} x #{n}"
   end.join(" + ")
 end

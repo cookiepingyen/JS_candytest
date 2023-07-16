@@ -2,13 +2,23 @@
 # 程式語言：Ruby
 # 題目：在某個數字陣列裡，可能藏有某個不合群的奇數或偶數，試著找出它！
 
-#
-def findSomeDifferent(numbers) 
-   #如果偶數只有一個,回傳偶數值第一個,如果偶數多個就回傳奇數
-  even = numbers.select{|n|n.even?}
-  odd = numbers.select{|n|n.odd?}
-  return (even.length > odd.length)? odd[0] : even[0]; 
+#1
+# def findSomeDifferent(numbers) 
+#    #如果偶數只有一個,回傳偶數值第一個,如果偶數多個就回傳奇數
+#   even = numbers.select{|n|n.even?}
+#   odd = numbers.select{|n|n.odd?}
+#   odd.length ==1 ? odd[0] : even[0]
+# end
 
+#2
+# def findSomeDifferent(numbers)
+#   odd, even = numbers.partition(&:odd?)
+#   odd.length == 1 ? odd[0] : even[0]
+# end
+
+
+def findSomeDifferent(numbers)
+  numbers.partition(&:odd?).find(&:one?).first
 end
 
 

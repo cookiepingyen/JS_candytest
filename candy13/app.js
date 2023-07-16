@@ -21,6 +21,10 @@ function isValidVatNumber(vat) {
   }
 }
 
+
+
+
+
 console.log(isValidVatNumber("10458575")); // true
 console.log(isValidVatNumber("88117125")); // true
 console.log(isValidVatNumber("53212539")); // true

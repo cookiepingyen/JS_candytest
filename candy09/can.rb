@@ -3,7 +3,7 @@
 # 題目：移除網址中的錨點（Anchor）
 
 def removeAnchor(url) 
-  return url.split("#")[0];
+  url.split("#").first
 end
 
 p removeAnchor("5xruby.tw"); # 印出 5xruby.tw
