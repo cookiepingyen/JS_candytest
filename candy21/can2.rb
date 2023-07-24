@@ -3,12 +3,12 @@
 # 題目：實作 Stack 資料結構
 
 class Stack 
-  def initialize(item =[])
+  def initialize(item)
     @item = item
   end
 
-  def push(num = nil)
-    @item.push(num) if num.is_a?(Integer)
+  def push(num)
+    @item.push(num) if num.any?
   end
 
   def pop()
